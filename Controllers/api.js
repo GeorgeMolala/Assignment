@@ -173,6 +173,17 @@ router.route('/users/:userid/tasks/:taskid').get((request,response) => {
          
         });
 
+
+app.get('/users', (req,res)=>{
+
+    try{
+        dbData.getUsers().then(result => response.json(result));
+    }
+    catch(err){
+        response.status(500).json("Unsuccessful");
+    }
+} );
+
 var port = process.env.PORT || 4000;
 console.log(port);
 app.listen(port);
