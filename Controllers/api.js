@@ -21,7 +21,7 @@ app.use('/api', router);
 // API for getting User
 router.route('/users').get((request,response) => {
 try{
-    dbData.getUsers().then(result => response.json(result[0]));
+    dbData.getUsers().then(result => response.json(result));
 }
 catch(err){
     response.status(500).json("Unsuccessful");

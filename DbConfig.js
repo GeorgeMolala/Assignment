@@ -1,19 +1,21 @@
 
 
-const sql = require("mssql/msnodesqlv8");
+
 
 var SqlConfig = {
-  server: "DESKTOP-Q5ED3JH",
-  database: "NodejsDb",
-   driver: "msnodesqlv8",
- 
+  
+  user: 'georgemolalaAdmin', 
+  password: 'JobHunting97',  
+  database: 'NodejsDb',
+  server: 'demogeorgemolala.database.windows.net',
+  
   options: {
-   trustServerCertificate: true, // change to true for local dev / self-signed certs
-   trustedConnection: true,
-    Encrypt:false
 
-  },
-  port: 1433
+    trustedConnection: true,
+    Encrypt:true,
+
+  }, 
+  
  }
 
 

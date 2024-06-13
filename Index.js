@@ -3,21 +3,21 @@ const { Date } = require('msnodesqlv8');
 const SqlConfig = require('./DbConfig.js');
 //const Users = require('./Models/User.js')
 
-const sql = require("mssql/msnodesqlv8");
+const sql = require("mssql");
 
 //Get All Users
 async function getUsers () {
 
-    try{
+  //  try{
 
     let Pool = await sql.connect(SqlConfig)
-    const test = await Pool.query("SELECT * FROM Users_tbl")    
+    const test = await Pool.request().query("SELECT * FROM Users_tbl")    
    
      return test.recordsets;
-    }
-      catch(err){
-             console.log("Connection Error")
-      }
+   // }
+     // catch(err){
+    //         console.log("Connection Error")
+    //  }
 };
 
 
