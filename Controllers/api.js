@@ -174,7 +174,7 @@ router.route('/users/:userid/tasks/:taskid').get((request,response) => {
         });
 
 
-app.get('/users', (req,res)=>{
+app.get("*", (req,res)=>{
 
     try{
         dbData.getUsers().then(result => response.json(result));
@@ -184,7 +184,7 @@ app.get('/users', (req,res)=>{
     }
 } );
 
-var port = process.env.Siteaccess || 80;
+var port = process.env.PORT || 80;
 console.log(port);
 app.listen(port);
 console.log(port);
