@@ -184,7 +184,7 @@ app.get('/users', (req,res)=>{
     }
 } );
 
-var port = process.env.PORT || process.env.Siteaccess;
+var port = process.env.PORT || 8080;
 console.log(port);
 app.listen(port);
 console.log(port);
